@@ -1,0 +1,148 @@
+*, *::before, *::after {
+    background:white;
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+body{
+    position:relative;
+}
+
+/* utility classes */
+
+.flex {
+    display:flex;
+}
+
+.center{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.column {
+    flex-direction: column;
+}
+
+.full {
+    width:100%;
+}
+
+
+/* primary content */
+header {
+    margin:1rem 0;
+}
+
+header h1 {
+    font-size:4em;
+}
+
+#primaryContent h2 {
+    margin:.5rem 0;
+}
+
+#primaryContent > div {
+    margin:.5rem 0;
+}
+
+@media (max-width:35rem){
+    header h1{
+        font-size: clamp(1rem, 10em, 4rem);
+    }
+}
+
+
+
+/* buttons */
+button {
+    transition: 500ms ease-in-out;
+}
+
+button:hover{
+    transform: scale(1.1);
+}
+
+.btn {
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    border:none;
+    box-shadow: 2px 2px 5px black inset;
+}
+
+.btnColor > * {
+    margin: 0 1rem;
+}
+
+.btnSize > * {    
+    border-radius: 50%;
+    border: none;
+    background:#AAA;
+    margin: 0 1rem;
+    box-shadow: -15px -15px 30px rgb(50, 50, 50) inset;
+}
+
+.btnSize span {
+    background-color: transparent;
+}
+
+.btnSml {
+    width:50px;
+    height:50px;
+    font-size: small;
+}
+
+.btnMdm {
+    width:100px;
+    height:100px;
+    font-size:medium;
+}
+
+.btnLrg {
+    width:150px;
+    height:150px;
+    font-size: larger;
+}
+
+#red{background:rgb(255, 0, 0); box-shadow: -8px -8px 15px rgb(100, 0, 0) inset;}
+#green{background:rgb(0, 255, 0); box-shadow: -8px -8px 15px rgb(0, 100, 0) inset;}
+#blue{background:rgb(0, 0, 255); box-shadow: -8px -8px 15px rgb(0, 0, 100) inset;}
+
+
+
+
+/* popup */
+#popUp {
+    position:absolute;
+    background:#000;
+    top: 20rem;
+    width:80%;
+    padding:5rem;
+    margin:0 10%;
+    display: none;
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+#popUp h3{
+    font-size: xx-large;
+    background-color: transparent;
+    color:white;
+}
+
+#popUp button {
+    width:100%;
+    padding:1rem;
+    border-radius: 10px;
+    border:1px solid black;
+    background-color: #333;
+    color:white;
+}
+
+#overlay {
+    position:absolute;
+    top:0;left:0;right:0;bottom:0;
+    z-index:500;
+    background-color: rgba(50, 50, 50, .8);
+    display:none;
+}

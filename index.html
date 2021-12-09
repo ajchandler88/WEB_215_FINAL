@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chase the Ball</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js" integrity="sha512-w1Bktzax55ZbjW5Mqjz8+mKz4KqRjEUU35Dpq/ath29yskKqIGwNIHiFNp03m/OiJWDXvdQ1/g6aV+l4PeVO7Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+
+<body>    
+    <div id="overlay"></div>
+
+    <header class="flex center full column">
+        <span id="intro"></span>
+        <h1 id="game"></h1>
+    </header>
+    
+
+    <section id="primaryContent" class="flex center full column">
+
+        <div id="myCanvas" disabled>
+            <script src="sketch.js"></script>
+        </div>
+
+        <h2>Choose a color</h2>
+
+        <div class="btnColor">
+            <button type ="button" class="btn" id="red" onclick="colorRed()"></button>
+            <button type ="button" class="btn" id="green" onclick="colorGreen()"></button>
+            <button type ="button" class="btn" id="blue" onclick="colorBlue()"></button>
+        </div>
+
+        <h2>Choose a starting ball size</h2>
+
+        <div class="btnSize">
+            <button type ="button" class="btnSml" id="btnSml" onclick="btnSml()"><span>Hard</span></button>
+            <button type ="button" class="btnMdm" id="btnMdm" onclick="btnMdm()"><span>Medium</span></button>
+            <button type ="button" class="btnLrg" id="btnLrg" onclick="btnLrg()"><span>Easy</span></button>
+        </div>
+
+    </section>
+
+    <!-- <section>
+        <ul>
+            <li>name of the game</li>
+            <li>instruction</li>
+        </ul>
+        <ul>
+            <li>responsive web design</li>
+            <li>complex css selectors</li>
+            <li>css pseudo classes</li>
+        </ul>
+        <ul>
+            <li>html5 canvas base</li>
+            <li>p5 and javascript to make it work</li>
+            <li>js should include as many as possile 
+                <ul>
+                    <li>js variables</li>
+                    <li>js function</li>
+                    <li>js events</li>
+                    <li>js conditionals</li>
+                    <li>js arrays</li>
+                    <li>json</li>
+                </ul>
+            </li>
+        </ul>
+    </section> -->
+
+    <section id="popUp" class="flex center column">
+        <h3>You Win!</h3>
+        <button type="reset" onclick="reload()">Click here to play again!</button>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
